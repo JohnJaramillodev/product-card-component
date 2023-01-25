@@ -1,0 +1,126 @@
+:root {
+    --cream: hsl(30, 38%, 92%);
+    --very-dark: hsl(212, 21%, 14%);
+    --primary-color: hsl(158, 36%, 37%);
+    --active-color: hsl(156, 38%, 18%);
+    --dark-grayish: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 62.5%;
+    background-color: var(--cream)
+}
+
+main {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-product {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: fit-content;
+    border-radius: 8px;
+    background-color: var(--white)
+}
+
+.card-product img {
+    width: 100%;
+    height: 220px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.product-info {
+    padding: 22px;
+}
+
+.product-info div > p {
+    font-family:'Montserrat', sans-serif;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.32rem;
+    color: var(--dark-grayish)
+}
+
+.product-info div h3 {
+    margin: 10px 0 14px;
+    padding-right: 14px;
+    font-family: 'Fraunces', serif;
+    font-size: 1.98rem;
+    font-weight: 700;
+    line-height: 2rem;
+    color: var(--very-dark)
+}
+
+.product-info .product-info-description p {
+    font-family:'Montserrat', sans-serif;
+    font-size: 0.82rem;
+    line-height: 1.4rem;
+    word-spacing: 0.03rem;
+    letter-spacing: 0.01rem;
+    color: var(--dark-grayish)
+}
+
+.product-info-price {
+    display: flex;
+    padding: 16px 0;
+}
+
+.product-info-price p {
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.product-info-price small {
+    align-self: center;
+    margin-left: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.82rem;
+    text-decoration: line-through;
+    color: var(--dark-grayish);
+}
+
+.primary-button {
+    width: 100%;
+    padding: 14px;
+    border: transparent;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.primary-button:active {
+    background-color: var(--active-color);
+}
+
+.primary-button:hover {
+    cursor: pointer;
+}
+
+.primary-button span {
+    display: inline-block;
+    width: 20px;
+    height: 16px;
+    margin-right: 12px;
+    vertical-align: top;
+    background-image: url('/assets/icons/icon-cart.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}

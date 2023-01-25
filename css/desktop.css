@@ -1,0 +1,138 @@
+:root {
+    --cream: hsl(30, 38%, 92%);
+    --very-dark: hsl(212, 21%, 14%);
+    --primary-color: hsl(158, 36%, 37%);
+    --active-color: hsl(156, 38%, 18%);
+    --dark-grayish: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 62.5%;
+    background-color: var(--cream)
+}
+
+main {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-product {
+    display: grid;
+    grid-template-columns: repeat(2, 240px);
+    grid-template-rows: repeat(3, 120px);
+    width: min-content;
+    border-radius: 8px;
+    background-color: var(--white)
+}
+
+.card-product picture {
+    grid-column: 1;
+    grid-row: 1/4;
+}
+
+.card-product img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.product-info {
+    grid-column: 2;
+    grid-row: 1/4;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    padding: 26px;
+}
+
+.product-info div > p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.24rem;
+    color: var(--dark-grayish)
+}
+
+.product-info h3 {
+    margin: 16px 0 0;
+    font-family: 'Fraunces', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.6rem;
+    color: var(--very-dark)
+}
+
+.product-info .product-info-description p {
+    margin: 20px 0 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    line-height: 1.15rem;
+    color: var(--dark-grayish)
+}
+
+.product-info .product-info-description br {
+    display:none
+}
+
+.product-info-price {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.product-info-price p {
+    font-family: 'Fraunces', serif;
+    font-size: 1.62rem;
+    color: var(--primary-color);
+}
+
+.product-info-price small {
+    align-self: center;
+    margin-left: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.64rem;
+    text-decoration: line-through;
+    color: var(--dark-grayish);
+}
+
+.primary-button {
+    width: 100%;
+    height: 38px;
+    padding: 12px;
+    border: transparent;
+    border-radius: 6px;
+    background-color: var(--primary-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.primary-button:active {
+    background-color: var(--active-color);
+}
+
+.primary-button:hover {
+    cursor: pointer;
+}
+
+.primary-button span {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin-right: 8px;
+    vertical-align: top;
+    background-image: url('/assets/icons/icon-cart.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
