@@ -63,7 +63,7 @@ main {
     color: var(--dark-grayish)
 }
 
-.product-info h3 {
+.product-info h1 {
     margin: 16px 0 0;
     font-family: 'Fraunces', serif;
     font-size: 1.6rem;

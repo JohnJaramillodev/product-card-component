@@ -54,7 +54,7 @@ main {
     color: var(--dark-grayish)
 }
 
-.product-info div h3 {
+.product-info div h1 {
     margin: 10px 0 14px;
     padding-right: 14px;
     font-family: 'Fraunces', serif;
